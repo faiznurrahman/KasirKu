@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_dashboard"
+            android:title="Dashboard"
+            android:icon="@drawable/dashboard"/>
+        <item android:id="@+id/nav_kasir"
+            android:title="Kasir"
+            android:icon="@drawable/kasir"/>
+        <item android:id="@+id/nav_barang"
+            android:title="Barang"
+            android:icon="@drawable/barang"/>
+        <item android:id="@+id/nav_laporan"
+            android:title="Laporan"
+            android:icon="@drawable/laporan"/>
+        <item android:id="@+id/nav_pengaturan"
+            android:title="Pengaturan"
+            android:icon="@drawable/pengaturan"/>
+        <item android:id="@+id/nav_bantuan"
+            android:title="Pusat Bantuan"
+            android:icon="@drawable/bantuan"/>
+        <item android:id="@+id/nav_kritik"
+            android:title="Kritik Saran"
+            android:icon="@drawable/kritik"/>
+    </group>
+
+</menu>
