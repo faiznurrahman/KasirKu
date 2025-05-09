@@ -7,44 +7,13 @@
     android:fitsSystemWindows="true"
     android:background="@color/white">
 
-    <LinearLayout
-        android:fitsSystemWindows="true"
+    <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:fitsSystemWindows="true"
+        android:layout_height="match_parent">
 
-        <!-- Toolbar -->
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#ffffff"
-            android:fitsSystemWindows="true"
-            android:elevation="8dp"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
-            app:navigationIcon="@drawable/menu">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/toolbar_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppinsregular"
-                    android:text="Laporan"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintHorizontal_bias="0.409"
-                    app:layout_constraintVertical_bias="0.0" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.appcompat.widget.Toolbar>
 
         <!-- Konten dengan padding kiri-kanan -->
         <LinearLayout
@@ -250,17 +219,7 @@
                 android:textColor="@android:color/white" />
 
         </LinearLayout>
-    </LinearLayout>
+    </ScrollView>
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/header"
-        app:menu="@menu/main_menu"
-        app:itemBackground="@drawable/nav_item_background"
-        app:itemTextColor="@color/nav_item_text_color"
-        app:itemIconTint="@color/nav_item_text_color"/>
+
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,10 @@
+{
+  "rules": {
+    "users": {
+      "$uid": {
+        ".read": "auth != null",  // hanya pengguna yang terautentikasi bisa membaca
+        ".write": "auth != null"  // hanya pengguna yang terautentikasi bisa menulis
+      }
+    }
+  }
+}

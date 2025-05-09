@@ -1,14 +1,16 @@
-package com.example.kasirku
+package com.example.kasirku.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
 import android.view.View
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.kasirku.R
+import com.example.kasirku.auth.SignUpActivity
+import com.example.kasirku.auth.SignInActivity
 
 class OnBoardingActivity : AppCompatActivity(), View.OnClickListener {
 

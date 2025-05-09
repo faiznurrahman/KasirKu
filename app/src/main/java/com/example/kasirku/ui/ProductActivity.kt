@@ -1,32 +1,23 @@
-package com.example.kasirku
+package com.example.kasirku.ui
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.kasirku.R
 
-class SignInActivity : AppCompatActivity() {
-
-    private lateinit var textDaftar: TextView
-
+class ProductActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_sign_in)
-
+        setContentView(R.layout.activity_product)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        textDaftar = findViewById(R.id.textDaftar)
-        textDaftar.setOnClickListener {
-            val intent = Intent(this@SignInActivity, SignUpActivity::class.java)
-            startActivity(intent)
-        }
+
     }
 }

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".SignUpActivity">
+    tools:context=".auth.SignUpActivity">
 
     <TextView
         android:id="@+id/textKasirku"
@@ -34,6 +34,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"  />
+
+
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="0dp"
@@ -45,6 +57,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -80,7 +93,9 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/rounded_corner"
                 android:inputType="textEmailAddress"
-                android:padding="12dp" />
+                android:padding="12dp"
+                android:hint="example@gmail.com"
+                android:autofillHints="emailAddress"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -95,7 +110,13 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/rounded_corner"
                 android:inputType="textPassword"
-                android:padding="12dp" />
+                android:paddingEnd="20dp"
+                android:padding="12dp"
+                android:drawableTint="#7D7D7D"
+                android:drawableEnd="@drawable/hide"
+                android:hint="Kata Sandi"/>
+
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -110,7 +131,11 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/rounded_corner"
                 android:inputType="textPassword"
-                android:padding="12dp" />
+                android:paddingEnd="20dp"
+                android:padding="12dp"
+                android:drawableTint="#7D7D7D"
+                android:drawableEnd="@drawable/hide"
+                android:hint="Konfirmasi Kata Sandi"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -121,7 +146,9 @@
                 <CheckBox
                     android:id="@+id/checkBox"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"/>
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -161,6 +188,25 @@
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:background="@drawable/button_corner" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="atau"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:textColor="#7D7D7D"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/google_sign_un_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Daftar dengan Google"
+                android:textColor="#424242"
+                app:icon="@drawable/g"
+                app:cornerRadius="8dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
 
             <TextView
                 android:id="@+id/textMasuk"

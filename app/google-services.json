@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "202506772352",
+    "project_id": "kasirku-7ce1b",
+    "storage_bucket": "kasirku-7ce1b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:202506772352:android:dcc872c5a7f8ba067b2b65",
+        "android_client_info": {
+          "package_name": "com.example.kasirku"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "202506772352-g6ushsm06lbv2jr95pk6kqckeh5q3pfs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kasirku",
+            "certificate_hash": "590bd65079e07d0139ce41a1df14ea0627531c5e"
+          }
+        },
+        {
+          "client_id": "202506772352-b5nhaogct3phees3jbfq4e74dt07c7ro.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbL8wFeta1mt_ifvK59PobuNaei6WMo9g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "202506772352-b5nhaogct3phees3jbfq4e74dt07c7ro.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".SignInActivity">
+    tools:context=".auth.SignInActivity">
 
     <!-- Header -->
     <TextView
@@ -34,6 +34,17 @@
         app:layout_constraintTop_toBottomOf="@id/textKasirku"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="83dp"
+        android:layout_height="77dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <!-- Scrollable Form -->
     <ScrollView
@@ -81,7 +92,11 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/rounded_corner"
                 android:inputType="textPassword"
-                android:padding="12dp" />
+                android:paddingEnd="20dp"
+                android:padding="12dp"
+                android:drawableTint="#7D7D7D"
+                android:drawableEnd="@drawable/hide"
+                android:hint="Kata Sandi"/>
 
             <TextView
                 android:id="@+id/textLupaPassword"
@@ -104,13 +119,31 @@
                 android:background="@drawable/button_corner" />
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="atau"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:textColor="#7D7D7D"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/google_sign_in_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Masuk dengan Google"
+                android:textColor="#424242"
+                app:icon="@drawable/g"
+                app:cornerRadius="8dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+            <TextView
                 android:id="@+id/textDaftar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Belum punya akun? Daftar di sini"
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
-                android:textColor="#7D7D7D"
                 android:textSize="14sp" />
 
         </LinearLayout>
