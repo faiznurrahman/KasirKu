@@ -13,7 +13,8 @@
         android:id="@+id/textKasirku"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="KasirKu"
+        android:text="My Kasir"
+        android:fontFamily="@font/poppinsregular"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="#23B7D3"
@@ -34,17 +35,6 @@
         app:layout_constraintTop_toBottomOf="@id/textKasirku"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="83dp"
-        android:layout_height="77dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
     <!-- Scrollable Form -->
     <ScrollView
@@ -68,14 +58,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Email"
+                android:layout_marginBottom="8dp"
                 android:textSize="16sp"
                 android:layout_marginTop="8dp" />
 
             <EditText
                 android:id="@+id/editEmail"
+                android:hint="Contoh@gmail.com"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/edittext_background"
                 android:inputType="textEmailAddress"
                 android:padding="12dp" />
 
@@ -83,6 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Kata Sandi"
+                android:layout_marginBottom="8dp"
                 android:textSize="16sp"
                 android:layout_marginTop="12dp" />
 
@@ -90,7 +83,7 @@
                 android:id="@+id/editPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/edittext_background"
                 android:inputType="textPassword"
                 android:paddingEnd="20dp"
                 android:padding="12dp"
@@ -116,26 +109,7 @@
                 android:text="Masuk"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:background="@drawable/button_corner" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="atau"
-                android:layout_gravity="center"
-                android:layout_marginTop="16dp"
-                android:textColor="#7D7D7D"/>
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/google_sign_in_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Masuk dengan Google"
-                android:textColor="#424242"
-                app:icon="@drawable/g"
-                app:cornerRadius="8dp"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+                android:background="@drawable/btn_color" />
 
             <TextView
                 android:id="@+id/textDaftar"
@@ -145,8 +119,30 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
                 android:textSize="14sp" />
-
         </LinearLayout>
     </ScrollView>
+
+    <!-- Overlay Progress Loading -->
+    <FrameLayout
+        android:id="@+id/progressOverlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#B3FFFFFF"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/blue" />
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

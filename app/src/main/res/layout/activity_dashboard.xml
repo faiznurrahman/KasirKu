@@ -103,6 +103,7 @@
 
                 <!-- Kasir -->
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardKasir"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
@@ -135,6 +136,7 @@
 
                 <!-- Barang -->
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardBarang"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
@@ -167,13 +169,13 @@
 
                 <!-- Laporan -->
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardLaporan"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
                     android:layout_margin="8dp"
                     app:cardCornerRadius="12dp"
-                    app:cardElevation="6dp"
-                    android:onClick="openReportActivity">
+                    app:cardElevation="6dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -200,6 +202,7 @@
 
                 <!-- Pengaturan -->
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardPengaturan"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
@@ -264,6 +267,7 @@
 
                 <!-- Kritik Saran -->
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardKritik"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"

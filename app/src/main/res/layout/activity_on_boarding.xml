@@ -1,66 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.OnBoardingActivity">
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:gravity="center_horizontal">
 
+    <!-- Judul di tengah -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Kasir\nKasir Praktis, Tanpa Ribet"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp" />
 
+    <!-- Gambar responsive -->
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="404dp"
-        android:layout_height="657dp"
-        android:layout_marginTop="144dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/phone" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/iv_mockup"
         android:layout_width="411dp"
-        android:layout_height="225dp"
-        android:background="@drawable/bgwhiterounded"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_height="394dp"
+        android:layout_weight="1.2"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/phoneonboard" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/buttonDaftar"
-            android:layout_width="359dp"
-            android:layout_height="58dp"
-            android:background="@drawable/button_corner"
-            android:fontFamily="@font/poppinsregular"
-            android:text="Buat Akun"
-            android:textColor="#ffffff"
-            android:textSize="15dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.484"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.203" />
+    <!-- CardView isi tombol, ukurannya mengikuti sisa space tapi maksimal 300dp -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:maxHeight="300dp"
+        android:layout_weight="1"
+        app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="false"
+        app:cardBackgroundColor="@android:color/transparent">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnmasuk"
-            android:layout_width="363dp"
-            android:layout_height="63dp"
-            android:background="@drawable/button_cornerstroke"
-            android:fontFamily="@font/poppinsregular"
-            android:text="Masuk"
-            android:textColor="#23B7D3"
-            android:textSize="15dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.515"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.703" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bgonboard"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="24dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- Tombol Buat Akun -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonDaftar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/btn_color"
+                android:padding="18dp"
+                android:text="Buat Akun"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <!-- Tombol Masuk -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnmasuk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_border"
+                android:padding="18dp"
+                android:text="Masuk"
+                android:textAllCaps="false"
+                android:textColor="#00BCD4"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

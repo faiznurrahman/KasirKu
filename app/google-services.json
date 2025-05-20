@@ -1,44 +1,27 @@
 {
   "project_info": {
-    "project_number": "202506772352",
-    "project_id": "kasirku-7ce1b",
-    "storage_bucket": "kasirku-7ce1b.firebasestorage.app"
+    "project_number": "1057473296903",
+    "firebase_url": "https://mykasir-cae5d-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "mykasir-cae5d",
+    "storage_bucket": "mykasir-cae5d.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:202506772352:android:dcc872c5a7f8ba067b2b65",
+        "mobilesdk_app_id": "1:1057473296903:android:d29fb573d6e7b2a3e748a2",
         "android_client_info": {
-          "package_name": "com.example.kasirku"
+          "package_name": "com.teamdev.mykasir"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "202506772352-g6ushsm06lbv2jr95pk6kqckeh5q3pfs.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.kasirku",
-            "certificate_hash": "590bd65079e07d0139ce41a1df14ea0627531c5e"
-          }
-        },
-        {
-          "client_id": "202506772352-b5nhaogct3phees3jbfq4e74dt07c7ro.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBbL8wFeta1mt_ifvK59PobuNaei6WMo9g"
+          "current_key": "AIzaSyArKwGfUOezAImTNXNRqoDh1SMw0bYZaAU"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "202506772352-b5nhaogct3phees3jbfq4e74dt07c7ro.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomSheetLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/optionDaily"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Periode Harian"
+        android:background="@drawable/bglightblue"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:padding="12dp" />
+
+    <TextView
+        android:id="@+id/optionMonthly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Periode Bulanan"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:padding="12dp" />
+
+    <TextView
+        android:id="@+id/optionYearly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Periode Tahunan"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:padding="12dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Batal"
+            android:background="@drawable/btn_border"
+            android:textColor="@color/blue"/>
+
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSelect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pilih"
+            android:background="@drawable/btn_color"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</LinearLayout>

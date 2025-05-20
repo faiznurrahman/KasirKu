@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#FFFFFF"
+    android:paddingHorizontal="32dp">
+
+    <!-- Icon centang -->
+    <ImageView
+        android:id="@+id/imageSuccess"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@drawable/check_circle"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Good Job -->
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Good Job"
+        android:textSize="20sp"
+        android:textColor="#444444"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Transaksi berhasil -->
+    <TextView
+        android:id="@+id/textSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transaksi berhasil"
+        android:textSize="14sp"
+        android:textColor="#999999"
+        android:layout_marginBottom="40dp"/>
+
+    <!-- Tombol Transaksi Baru -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnTransaksiBaru"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Transaksi Baru"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:background="@drawable/btn_color"
+        android:layout_marginBottom="16dp"
+        android:layout_marginHorizontal="24dp" />
+
+    <!-- Tombol Lihat Struk -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLihatStruk"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Lihat Struk"
+        android:textColor="#26C6DA"
+        android:textStyle="bold"
+        android:background="@drawable/btn_border"
+        android:layout_marginHorizontal="24dp" />
+
+</LinearLayout>

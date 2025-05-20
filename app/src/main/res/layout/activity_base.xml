@@ -42,12 +42,13 @@
             android:layout_gravity="bottom|start">
 
             <!-- Tombol Logout -->
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_logout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Logout"
-                android:background="@drawable/button_cornerstroke"/>
+                android:textColor="@color/white"
+                android:background="@drawable/btn_color"/>
 
             <!-- Keterangan Versi Aplikasi -->
             <TextView

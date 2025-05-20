@@ -5,5 +5,7 @@
     <color name="nav_selected_background">#D6F0FF</color> <!-- Warna latar saat aktif -->
     <color name="nav_text_color_selected">#23B7D3</color> <!-- Warna teks/icon saat aktif -->
     <color name="nav_text_color_normal">#333333</color> <!-- Warna teks/icon saat non-aktif -->
+    <color name="blue">#23B7D3</color> <!-- Ganti dengan warna biru yang kamu inginkan -->
+
 
 </resources>
