@@ -24,6 +24,12 @@
         tools:replace="android:fullBackupContent"
         tools:targetApi="31">
         <activity
+            android:name=".ui.setting.ChangePwActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfilActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.SuggestionsActivity"
             android:exported="false" />
         <activity
@@ -34,12 +40,6 @@
             android:exported="false" />
         <activity
             android:name=".ui.cashier.PaymentActivity"
-            android:exported="false" />
-        <activity
-            android:name=".model.Cashier"
-            android:exported="false" />
-        <activity
-            android:name=".adapter.CashierAdapter"
             android:exported="false" />
         <activity
             android:name=".ui.cashier.CashierActivity"

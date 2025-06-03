@@ -25,6 +25,7 @@ class SignInActivity : AppCompatActivity() {
     private lateinit var editPassword: EditText
     private lateinit var btnSignIn: Button
     private lateinit var loadingOverlay: FrameLayout
+    private lateinit var textLupaPassword: TextView
 
 
     private lateinit var auth: FirebaseAuth
@@ -49,6 +50,8 @@ class SignInActivity : AppCompatActivity() {
         btnSignIn = findViewById(R.id.btnSignIn)
         loadingOverlay = findViewById(R.id.progressOverlay)
         textDaftar = findViewById(R.id.textDaftar)
+        textLupaPassword = findViewById(R.id.textLupaPassword)
+
 
         setupToggleIcon(editPassword)
 
@@ -87,6 +90,49 @@ class SignInActivity : AppCompatActivity() {
                     }
                 }
         }
+
+        textLupaPassword.setOnClickListener {
+            val email = editEmail.text.toString().trim()
+
+            if (email.isEmpty()) {
+                MotionToast.createToast(
+                    this,
+                    "Perhatian!",
+                    "Masukkan email terlebih dahulu untuk reset password.",
+                    MotionToastStyle.WARNING,
+                    MotionToast.GRAVITY_BOTTOM,
+                    MotionToast.LONG_DURATION,
+                    ResourcesCompat.getFont(this, R.font.poppinsregular)
+                )
+                return@setOnClickListener
+            }
+
+            auth.sendPasswordResetEmail(email)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        MotionToast.createToast(
+                            this,
+                            "Berhasil!",
+                            "Link reset password telah dikirim ke email.",
+                            MotionToastStyle.SUCCESS,
+                            MotionToast.GRAVITY_BOTTOM,
+                            MotionToast.LONG_DURATION,
+                            ResourcesCompat.getFont(this, R.font.poppinsregular)
+                        )
+                    } else {
+                        MotionToast.createToast(
+                            this,
+                            "Gagal!",
+                            "Terjadi kesalahan saat mengirim email. Coba lagi.",
+                            MotionToastStyle.ERROR,
+                            MotionToast.GRAVITY_BOTTOM,
+                            MotionToast.LONG_DURATION,
+                            ResourcesCompat.getFont(this, R.font.poppinsregular)
+                        )
+                    }
+                }
+        }
+
     }
 
     override fun dispatchTouchEvent(ev: MotionEvent): Boolean {

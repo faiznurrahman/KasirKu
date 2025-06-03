@@ -17,6 +17,7 @@
 
         <!-- Item 1: Profil -->
         <LinearLayout
+            android:id="@+id/itemProfil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -46,6 +47,7 @@
 
         <!-- Item 2: Ubah Kata Sandi -->
         <LinearLayout
+            android:id="@+id/itemCp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -74,33 +76,33 @@
         </LinearLayout>
 
         <!-- Item 3: Logout -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="12dp"
-            android:background="?attr/selectableItemBackground"
-            android:gravity="center_vertical">
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:padding="12dp"-->
+<!--            android:background="?attr/selectableItemBackground"-->
+<!--            android:gravity="center_vertical">-->
 
-            <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:src="@drawable/logout" />
+<!--            <ImageView-->
+<!--                android:layout_width="32dp"-->
+<!--                android:layout_height="32dp"-->
+<!--                android:src="@drawable/logout" />-->
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_weight="1"
-                android:text="Logout"
-                android:textColor="#000000"
-                android:textSize="16sp" />
+<!--            <TextView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="12dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="Logout"-->
+<!--                android:textColor="#000000"-->
+<!--                android:textSize="16sp" />-->
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_arrow_right" />
-        </LinearLayout>
+<!--            <ImageView-->
+<!--                android:layout_width="24dp"-->
+<!--                android:layout_height="24dp"-->
+<!--                android:src="@drawable/ic_arrow_right" />-->
+<!--        </LinearLayout>-->
 
     </LinearLayout>
 

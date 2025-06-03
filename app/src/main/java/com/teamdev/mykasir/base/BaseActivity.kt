@@ -1,6 +1,7 @@
 package com.teamdev.mykasir.base
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import android.widget.FrameLayout
@@ -95,6 +96,19 @@ open class BaseActivity : AppCompatActivity() {
                 }
                 R.id.nav_kritik -> {
                     startActivity(Intent(this, SuggestionsActivity::class.java))
+                }
+                R.id.nav_bantuan -> {
+                    val nomorWa = "6285721841873"
+                    val pesan = "Halo, saya butuh bantuan dengan aplikasi MyKasir."
+                    val url = "https://wa.me/$nomorWa?text=${Uri.encode(pesan)}"
+
+                    try {
+                        val intent = Intent(Intent.ACTION_VIEW)
+                        intent.data = Uri.parse(url)
+                        startActivity(intent)
+                    } catch (e: Exception) {
+                        Toast.makeText(this, "WhatsApp tidak ditemukan di perangkat ini.", Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
             drawerLayout.closeDrawer(GravityCompat.START)

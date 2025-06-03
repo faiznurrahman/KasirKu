@@ -1,11 +1,13 @@
 package com.teamdev.mykasir.ui
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.teamdev.mykasir.R
@@ -65,6 +67,24 @@ class DashboardActivity : BaseActivity() {
         val cardLaporan: View = findViewById(R.id.cardLaporan)
         val cardPengaturan: View = findViewById(R.id.cardPengaturan)
         val cardKritik: View = findViewById(R.id.cardKritik)
+        val cardBantuan: View = findViewById(R.id.cardBantuan)
+
+        cardBantuan.setOnClickListener {
+            val nomorWa = "6285721841873" // Ganti dengan nomor tujuan (format internasional tanpa "+" atau spasi)
+            val pesan = "Halo, saya butuh bantuan dengan aplikasi MyKasir."
+            val url = "https://wa.me/$nomorWa?text=${Uri.encode(pesan)}"
+
+            try {
+                val intent = Intent(Intent.ACTION_VIEW)
+                intent.data = Uri.parse(url)
+                startActivity(intent)
+            } catch (e: Exception) {
+                Log.e("DashboardActivity", "WhatsApp tidak terpasang: ${e.message}")
+                Toast.makeText(this, "WhatsApp tidak ditemukan di perangkat ini.", Toast.LENGTH_SHORT).show()
+
+            }
+        }
+
 
         cardKasir.setOnClickListener {
             startActivity(Intent(this, CashierActivity::class.java))

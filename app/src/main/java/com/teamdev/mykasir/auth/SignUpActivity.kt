@@ -1,6 +1,8 @@
 package com.teamdev.mykasir.auth
 
 import android.content.Intent
+import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -16,6 +18,11 @@ import com.teamdev.mykasir.R
 import com.teamdev.mykasir.ui.DashboardActivity
 import com.google.firebase.auth.FirebaseAuth
 import android.text.InputType
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.method.LinkMovementMethod
+import android.text.style.ClickableSpan
+import android.text.style.ForegroundColorSpan
 import android.view.MotionEvent
 import android.widget.CheckBox
 import android.widget.FrameLayout
@@ -69,6 +76,38 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener {
 
         btnDashboardActivity.setOnClickListener(this)
         textMasuk.setOnClickListener(this)
+        val textView = findViewById<TextView>(R.id.textLinkGabungan)
+        val fullText = "Dengan mendaftar, kamu sudah menyetujui Syarat Ketentuan dan Kebijakan Privasi"
+        val spannable = SpannableString(fullText)
+
+// Span untuk "Syarat Ketentuan"
+        val termsStart = fullText.indexOf("Syarat Ketentuan")
+        val termsEnd = termsStart + "Syarat Ketentuan".length
+        val termsSpan = object : ClickableSpan() {
+            override fun onClick(widget: View) {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://mykasir-six.vercel.app/terms.html"))
+                widget.context.startActivity(intent)
+            }
+        }
+        spannable.setSpan(termsSpan, termsStart, termsEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        spannable.setSpan(ForegroundColorSpan(Color.parseColor("#23B7D3")), termsStart, termsEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+
+// Span untuk "Kebijakan Privasi"
+        val privacyStart = fullText.indexOf("Kebijakan Privasi")
+        val privacyEnd = privacyStart + "Kebijakan Privasi".length
+        val privacySpan = object : ClickableSpan() {
+            override fun onClick(widget: View) {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://mykasir-six.vercel.app/privacy-policy.html"))
+                widget.context.startActivity(intent)
+            }
+        }
+        spannable.setSpan(privacySpan, privacyStart, privacyEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        spannable.setSpan(ForegroundColorSpan(Color.parseColor("#23B7D3")), privacyStart, privacyEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+
+        textView.text = spannable
+        textView.movementMethod = LinkMovementMethod.getInstance()
+        textView.highlightColor = Color.TRANSPARENT
+
     }
 
     private fun setupToggleIcon(editText: EditText) {
